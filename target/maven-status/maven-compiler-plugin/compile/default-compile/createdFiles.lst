@@ -1,12 +1,16 @@
 com\svelte\util\PasswordUtil.class
 com\svelte\controller\UserServlet.class
+com\svelte\filter\AuthFilter.class
 com\svelte\model\Cart.class
+com\svelte\util\TestConnection.class
 com\svelte\dao\CategoryDAO.class
 com\svelte\model\OrderItem.class
 com\svelte\model\Product.class
 com\svelte\model\User.class
 com\svelte\controller\AdminServlet.class
 com\svelte\dao\ProductDAO.class
+com\svelte\util\ValidationUtil.class
+com\svelte\filter\AdminFilter.class
 com\svelte\util\SessionUtil.class
 com\svelte\model\Category.class
 com\svelte\dao\OrderDAO.class
