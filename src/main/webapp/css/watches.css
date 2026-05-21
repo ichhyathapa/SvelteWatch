@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* GLOBAL */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+    color:#2f2a26;
+    overflow-x:hidden;
+    background:#ffffff; /* CHANGED to white */
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+    min-height:88vh;
+
+    background-size:cover;
+    background-position:center;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:150px;
+    align-items:center;
+
+    padding:55px 8%;
+
+}
+
+/* LEFT SIDE */
+
+.hero-left{
+    max-width:520px;
+}
+
+.hero-tag{
+    color:#b89146;
+
+    font-size:13px;
+    font-weight:600;
+
+    letter-spacing:4px;
+
+    display:inline-block;
+
+    margin-bottom:25px;
+}
+
+.hero-left h1{
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:50px;
+    font-weight:600;
+
+    line-height:0.95;
+
+    margin-bottom:28px;
+
+    color:#2f2a26;
+}
+
+.hero-left p{
+    color:#6f665d;
+
+    font-size:16px;
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+    max-width:500px;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+}
+
+.btn-dark,
+.btn-light{
+    padding:15px 34px;
+
+    text-decoration:none;
+
+    font-size:11px;
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    transition:0.3s ease;
+}
+
+/* DARK BUTTON */
+
+.btn-dark{
+    background:#2f2a26;
+    color:white;
+}
+
+.btn-dark:hover{
+    background:#8b8b69;
+}
+
+/* LIGHT BUTTON */
+
+.btn-light{
+    border:1px solid #cbbba5;
+
+    color:#2f2a26;
+    background:transparent;
+}
+
+.btn-light:hover{
+    background:#2f2a26;
+    color:white;
+}
+
+/* RIGHT IMAGE */
+
+.hero-right{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-right img{
+    width:80%;
+    max-width:420px;
+    height:auto;
+    border-radius: 17%;
+    object-fit:contain;
+
+    filter:
+        drop-shadow(0 25px 40px rgba(0,0,0,0.18));
+
+    transition:0.4s ease;
+}
+
+/* =========================
+   FEATURED SECTION
+========================= */
+
+.featured-section{
+    padding:80px 5%;
+    background:#fafafa;
+}
+
+/* FEATURED TITLE */
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title span{
+    font-size:14px;
+    font-weight:600;
+
+    letter-spacing:5px;
+
+    color:#b89146;
+
+    font-family:'Montserrat', sans-serif;
+}
+
+
+/* =========================
+   WATCH CATEGORY
+========================= */
+
+.watch-category{
+    margin-bottom:110px;
+}
+
+/* CATEGORY HEADER */
+
+.category-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.category-header h1{
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:32px;
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    margin-bottom:15px;
+
+    color:#2f2a26;
+}
+
+.category-header p{
+    color:#6f665d;
+
+    font-size:14px;
+    line-height:1.9;
+
+    max-width:720px;
+    margin:auto;
+}
+
+
+/* =========================
+   WATCH GRID
+========================= */
+
+.watch-grid{
+    display:flex;
+    justify-content:center;
+    gap:28px;
+    flex-wrap:wrap;
+}
+
+
+/* =========================
+   WATCH CARD
+========================= */
+
+.watch-card{
+    width:220px;
+
+    background:#fffaf4;
+
+    border-radius:12px;
+    overflow:hidden;
+
+    transition:0.4s ease;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+.watch-card a{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+}
+
+.watch-card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,0.14);
+}
+
+/* CARD IMAGE */
+
+.watch-card img{
+    width:100%;
+    height:280px;
+
+    object-fit:cover;
+
+    background:#efefef;
+}
+
+/* CARD INFO */
+
+.watch-info{
+    padding:22px;
+    text-align:center;
+}
+
+.watch-info h3{
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:24px;
+    font-weight:600;
+
+    margin-bottom:10px;
+
+    color:#2f2a26;
+}
+
+.watch-info p{
+    color:#b89146;
+
+    font-size:14px;
+    font-weight:600;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================
+   PRODUCTS SECTION
+========================= */
+
+.products{
+    padding:20px 5% 100px;
+    background:#ffffff;
+}
+
+/* PRODUCT GRID */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+}
+
+/* PRODUCT CARD */
+
+.product-card{
+    background:#fffaf4;
+
+    border-radius:12px;
+    overflow:hidden;
+
+    transition:0.4s ease;
+
+    box-shadow:0 8px 22px rgba(0,0,0,0.08);
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,0.13);
+}
+
+/* PRODUCT IMAGE */
+
+.product-card img{
+    width:100%;
+    height:320px;
+
+    object-fit:cover;
+}
+
+/* PRODUCT INFO */
+
+.product-info{
+    padding:24px;
+    text-align:center;
+}
+
+.product-info h3{
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:26px;
+
+    margin-bottom:10px;
+
+    color:#2f2a26;
+}
+
+.brand{
+    color:#7a7067;
+
+    font-size:14px;
+
+    margin-bottom:12px;
+}
+
+.price{
+    color:#2f2a26;
+
+    font-size:18px;
+    font-weight:700;
+
+    margin-bottom:18px;
+}
+
+/* BUTTON */
+
+.btn-small{
+    display:inline-block;
+
+    padding:12px 22px;
+
+    background:#2f2a26;
+    color:white;
+
+    text-decoration:none;
+
+    font-size:11px;
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    transition:0.3s ease;
+}
+
+.btn-small:hover{
+    background:#b89146;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+
+        gap:50px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-left{
+        max-width:100%;
+    }
+
+    .hero-left h1{
+        font-size:58px;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+
+    .watch-card{
+        width:200px;
+    }
+
+    .category-header h1{
+        font-size:26px;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero{
+        padding:60px 20px;
+    }
+
+    .hero-left h1{
+        font-size:42px;
+    }
+
+    .hero-left p{
+        font-size:15px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .featured-section,
+    .products{
+        padding:70px 20px;
+    }
+
+    .watch-grid{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .watch-card{
+        width:100%;
+        max-width:320px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+}

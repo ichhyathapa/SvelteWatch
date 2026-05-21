@@ -1,0 +1,371 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f0f2f5; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* Layout */
+.adminLayout { display: flex; min-height: 100vh; }
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    background: #e8eaed;
+    border-right: 1px solid #d1d5db;
+    padding: 24px 0;
+    flex-shrink: 0;
+}
+.logo { font-size: 20px; font-weight: bold; padding: 0 20px 20px; }
+.panelLabel {
+    font-size: 12px; color: #6b7280;
+    text-transform: uppercase;
+    padding: 0 20px 10px; letter-spacing: 1px;
+}
+.navList li a {
+    display: block; padding: 10px 20px;
+    border-bottom: 1px solid #d1d5db; font-size: 15px;
+}
+.navList li a:hover { background: #d4d6da; }
+.navList li.active a {
+    font-weight: bold; color: #2f54eb;
+    background: #d6dcfd; border-bottom: 2px solid #2f54eb;
+}
+.navList li.logout { margin-top: 20px; }
+.navList li.logout a { color: #e53e3e; border-bottom: none; }
+
+/* MAIN */
+.mainArea { flex: 1; display: flex; flex-direction: column; }
+.topBar {
+    height: 60px; background: #fff;
+    border-bottom: 1px solid #d1d5db;
+    display: flex; align-items: center;
+    padding: 0 24px; font-weight: bold; font-size: 16px;
+}
+.content { padding: 28px; }
+.content h2 { font-size: 22px; margin-bottom: 20px; }
+
+/* Page Header row (title + button) */
+.pageHeader {
+    display: flex; justify-content: space-between;
+    align-items: center; margin-bottom: 16px;
+}
+
+/* CARDS */
+.cardRow { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 28px; }
+.card {
+    flex: 1; min-width: 150px;
+    background: #e8eaed; border: 1px solid #d1d5db;
+    border-radius: 8px; padding: 20px; text-align: center;
+}
+.card h3 { font-size: 13px; color: #6b7280; margin-bottom: 8px; }
+.metric { font-size: 28px; font-weight: bold; }
+
+/* BOTTOM ROW */
+.bottom { display: flex; gap: 24px; align-items: flex-start; }
+.chartBox {
+    flex: 1; background: #fff;
+    border: 1px solid #d1d5db; border-radius: 8px; padding: 20px;
+}
+.chartBox h3 { font-size: 15px; font-weight: bold; margin-bottom: 12px; }
+#salesChart { height: 260px !important; width: 100% !important; }
+.recentBox {
+    width: 220px; background: #e8eaed;
+    border: 1px solid #d1d5db; border-radius: 8px; padding: 20px;
+}
+.recentBox h3 {
+    font-size: 15px; font-weight: bold;
+    margin-bottom: 12px; padding-bottom: 8px;
+    border-bottom: 1px solid #d1d5db;
+}
+.recentList li {
+    display: flex; justify-content: space-between;
+    padding: 9px 0; border-bottom: 1px solid #d1d5db; font-size: 14px;
+}
+.recentList li:last-child { border-bottom: none; }
+
+/* TABLE */
+.dataTable { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.dataTable th {
+    background: #4a6cf7; color: #fff;
+    padding: 10px 14px; text-align: left; font-size: 14px;
+}
+.dataTable td {
+    padding: 10px 14px; border-bottom: 1px solid #d1d5db; font-size: 14px;
+}
+.dataTable tr:hover { background: #f5f6fa; }
+
+/* BUTTONS */
+.btn {
+    background: #4a6cf7; color: #fff;
+    padding: 8px 16px; border-radius: 6px;
+    border: none; cursor: pointer; font-size: 14px;
+    display: inline-block;
+}
+.btn:hover { background: #2f54eb; }
+.btnEdit {
+    background: #38a169; color: #fff;
+    padding: 5px 12px; border-radius: 4px; font-size: 13px;
+    margin-right: 6px; display: inline-block;
+}
+.btnEdit:hover { background: #276749; }
+.btnDelete {
+    background: #e53e3e; color: #fff;
+    padding: 5px 12px; border-radius: 4px; font-size: 13px;
+    display: inline-block;
+}
+.btnDelete:hover { background: #c53030; }
+
+/* FORM BOX */
+.formBox {
+    background: #fff; border: 1px solid #d1d5db;
+    border-radius: 8px; padding: 20px;
+    margin-bottom: 24px; max-width: 400px;
+}
+.formBox h3 { margin-bottom: 12px; font-size: 15px; }
+.formBox input[type="text"] {
+    width: 100%; padding: 8px 12px;
+    border: 1px solid #d1d5db; border-radius: 6px;
+    font-size: 14px; margin-bottom: 10px;
+}
+
+/* MESSAGES */
+.successMsg {
+    background: #c6f6d5; color: #276749;
+    padding: 10px 14px; border-radius: 6px; margin-bottom: 16px;
+}
+.errorMsg {
+    background: #fed7d7; color: #c53030;
+    padding: 10px 14px; border-radius: 6px; margin-bottom: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .adminLayout { flex-direction: column; }
+    .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #d1d5db; }
+    .navList { display: flex; flex-wrap: wrap; }
+    .navList li a { padding: 8px 10px; border-bottom: none; font-size: 13px; }
+    .cardRow { flex-direction: column; }
+    .bottom { flex-direction: column; }
+    .recentBox { width: 100%; }
+}
+
+/* ADD PRODUCT PAGE */
+
+/* ADD PRODUCT TABLE DESIGN */
+
+/* PAGE */
+body{
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* LOGO */
+.logoArea{
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* BACK BUTTON */
+.backArea{
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.backBtn{
+    background: #cfcfcf;
+    padding: 10px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.backBtn:hover{
+    background: #b8b8b8;
+}
+
+/* CARD */
+.productCard{
+    width: 700px;
+    margin: auto;
+    background: #d9d9d9;
+    padding: 50px;
+    border-radius: 30px;
+}
+
+/* TITLE */
+.productCard h3{
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+/* TABLE */
+.formTable{
+    margin: auto;
+}
+
+.formTable td{
+    padding: 8px 15px;
+    font-size: 16px;
+}
+
+/* INPUTS */
+.formTable input{
+    width: 220px;
+    height: 28px;
+    border: none;
+    padding-left: 8px;
+    background: #f7f1f1;
+}
+
+/* BUTTON GROUP */
+.btnGroup{
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* BUTTONS */
+.saveBtn,
+.cancelBtn{
+    border: none;
+    padding: 8px 30px;
+    border-radius: 10px;
+    margin: 0 20px;
+    cursor: pointer;
+    background: #f7f1f1;
+}
+
+.saveBtn:hover,
+.cancelBtn:hover{
+    background: #e2dede;
+}
+
+
+/* =========================
+   FORM CONTAINER
+========================= */
+
+.formContainer{
+
+    width: 100%;
+    max-width: 700px;
+
+    background: #fff;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+
+    margin-top: 20px;
+}
+
+/* =========================
+   FORM LABELS
+========================= */
+
+.formContainer label{
+
+    display: block;
+
+    margin-top: 18px;
+    margin-bottom: 8px;
+
+    font-weight: 600;
+
+    color: #333;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.formContainer input[type="text"],
+.formContainer input[type="number"],
+.formContainer input[type="file"],
+.formContainer textarea{
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #dcdcdc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.formContainer textarea{
+
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+/* =========================
+   FOCUS EFFECT
+========================= */
+
+.formContainer input:focus,
+.formContainer textarea:focus{
+
+    border-color: #000;
+}
+
+/* =========================
+   UPDATE BUTTON
+========================= */
+
+.formContainer .add-btn{
+
+    margin-top: 25px;
+
+    background: #000;
+
+    color: #fff;
+
+    border: none;
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.formContainer .add-btn:hover{
+
+    background: #333;
+}
+
+/* =========================
+   PAGE SPACING
+========================= */
+
+.content{
+
+    padding: 30px;
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}

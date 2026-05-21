@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f8f6f2;
+    font-family:'Montserrat', sans-serif;
+    color:#111111;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.contact-hero{
+    height:52vh;
+
+    background:
+        linear-gradient(rgba(248,246,242,0.86),
+        rgba(248,246,242,0.86)),
+        url("../images/contact-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:0 20px;
+}
+
+.contact-overlay{
+    max-width:760px;
+}
+
+.contact-overlay span{
+    color:#b89146;
+
+    font-size:12px;
+    font-weight:600;
+
+    letter-spacing:4px;
+}
+
+.contact-overlay h1{
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:54px;
+    font-weight:600;
+
+    color:#222222;
+
+    line-height:1.1;
+
+    margin:20px 0;
+}
+
+.contact-overlay p{
+    color:#666666;
+
+    font-size:14px;
+    line-height:1.9;
+
+    max-width:620px;
+    margin:auto;
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section{
+    padding:75px 8% 20px;
+
+    display:grid;
+    grid-template-columns:1fr 0.92fr;
+
+    gap:60px;
+
+    align-items:start;
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.contact-info span{
+    color:#b89146;
+
+    font-size:12px;
+    font-weight:600;
+
+    letter-spacing:3px;
+}
+
+.contact-info h2{
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:40px;
+    font-weight:600;
+
+    line-height:1.1;
+
+    margin:18px 0 18px;
+}
+
+.contact-info p{
+    color:#666666;
+
+    font-size:14px;
+    line-height:1.8;
+
+    margin-bottom:24px;
+
+    max-width:520px;
+}
+
+
+/* =========================
+   INFO BOX
+========================= */
+
+.info-box{
+    display:flex;
+    align-items:center;
+
+    gap:15px;
+
+    background:white;
+
+    padding:16px 20px;
+
+    border-radius:12px;
+
+    margin-bottom:14px;
+
+    box-shadow:0 5px 14px rgba(0,0,0,0.04);
+
+    transition:0.3s ease;
+}
+
+.info-box:hover{
+    transform:translateY(-4px);
+}
+
+.info-box .material-symbols-outlined{
+    font-size:24px;
+    color:#b89146;
+}
+
+.info-box h3{
+    font-size:15px;
+    margin-bottom:3px;
+}
+
+.info-box p{
+    margin:0;
+
+    font-size:13px;
+    color:#777777;
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-form-box{
+    background:white;
+
+    padding:32px;
+
+    border-radius:16px;
+
+    box-shadow:0 10px 28px rgba(0,0,0,0.06);
+}
+
+.contact-form-box form{
+    display:flex;
+    flex-direction:column;
+}
+
+.contact-form-box input,
+.contact-form-box textarea{
+    width:100%;
+
+    padding:24px 18px;
+
+    margin-bottom:15px;
+
+    border:1px solid #e5e5e5;
+    border-radius:10px;
+
+    background:#fafafa;
+
+    outline:none;
+
+    font-size:13px;
+
+    font-family:'Montserrat', sans-serif;
+
+    transition:0.3s ease;
+}
+
+.contact-form-box input:focus,
+.contact-form-box textarea:focus{
+    border-color:#b89146;
+    background:white;
+}
+
+.contact-form-box textarea{
+    resize:none;
+}
+
+.contact-form-box button{
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:black;
+    color:white;
+
+    font-size:11px;
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+}
+
+.contact-form-box button:hover{
+    background:#b89146;
+}
+
+
+/* =========================
+   ONLINE SUPPORT SECTION
+========================= */
+
+.online-support{
+    padding:85px 8% 95px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+}
+
+
+/* TOP CONTENT */
+
+.support-left{
+    max-width:650px;
+
+    margin-bottom:42px;
+}
+
+.support-left span{
+    color:#b89146;
+
+    font-size:12px;
+    font-weight:600;
+
+    letter-spacing:4px;
+}
+
+.support-left h2{
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:42px;
+    font-weight:600;
+
+    line-height:1.1;
+
+    margin:18px 0;
+}
+
+.support-left p{
+    color:#666666;
+
+    font-size:14px;
+    line-height:1.9;
+}
+
+
+/* =========================
+   SUPPORT CARDS
+========================= */
+
+.support-right{
+    width:100%;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    max-width:1050px;
+}
+
+.support-item{
+    background:white;
+
+    padding:28px 22px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    min-height:190px;
+
+    transition:0.3s ease;
+
+    box-shadow:0 8px 22px rgba(0,0,0,0.05);
+}
+
+.support-item:hover{
+    transform:translateY(-7px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,0.08);
+}
+
+.support-item .material-symbols-outlined{
+    font-size:38px;
+
+    color:#b89146;
+
+    margin-bottom:14px;
+}
+
+.support-item h3{
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+    color:#111111;
+}
+
+.support-item p{
+    color:#777777;
+
+    font-size:13px;
+    line-height:1.8;
+
+    max-width:220px;
+}
+
+.success-message{
+    width:fit-content;
+    max-width:300px;
+    background:#d4edda;
+    color:#155724;
+    padding:12px 18px;
+    margin-bottom:18px;
+    border-radius:6px;
+    font-size:14px;
+    font-weight:500;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+    .contact-section{
+        grid-template-columns:1fr;
+    }
+
+    .support-right{
+        grid-template-columns:1fr;
+    }
+
+    .contact-overlay h1{
+        font-size:46px;
+    }
+
+    .contact-info h2,
+    .support-left h2{
+        font-size:36px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .contact-hero{
+        height:58vh;
+    }
+
+    .contact-overlay h1{
+        font-size:36px;
+    }
+
+    .contact-section,
+    .online-support{
+        padding:70px 20px;
+    }
+
+    .contact-form-box{
+        padding:26px 20px;
+    }
+
+    .support-item{
+        min-height:auto;
+        padding:24px 18px;
+    }
+
+    .support-item h3{
+        font-size:22px;
+    }
+
+}

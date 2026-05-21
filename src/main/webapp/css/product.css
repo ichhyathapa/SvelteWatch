@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* ================= GLOBAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    list-style:none;
+}
+
+body{
+    background:#f8f6f2;
+    font-family:'Montserrat', sans-serif;
+    color:#2f2a26;
+}
+
+
+/* ================= PRODUCT PAGE ================= */
+
+.product-page{
+    display:flex;
+    min-height:100vh;
+    background:#f8f6f2;
+}
+
+
+/* ================= FILTER SECTION ================= */
+
+.filter-section{
+    width:320px;
+    background:#afaf99;
+    padding:30px;
+    border-right:1px solid #d8cbb7;
+}
+
+.filter-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.filter-header h1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:30px;
+    font-weight:600;
+    color:white;
+    letter-spacing:1px;
+}
+
+.filter-toggle{
+    background:#52522d;
+    color:white;
+    border:none;
+    padding:12px 15px;
+    cursor:pointer;
+    font-size:18px;
+    transition:0.3s ease;
+}
+
+.filter-toggle:hover{
+    background:white;
+    color:#2f2a26;
+}
+
+/* FILTER CONTENT */
+
+.filter-content{
+    display:block;
+    margin-top:30px;
+}
+
+.filter-box{
+    margin-bottom:40px;
+}
+
+.filter-box h3{
+    font-family:'Cormorant Garamond', serif;
+    font-size:28px;
+    font-weight:600;
+    color:#ffffff;
+    margin-bottom:20px;
+}
+
+.filter-box label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+
+    font-family:'Montserrat', sans-serif;
+    font-size:16px;
+    font-weight:400;
+
+    color:#52522d;
+}
+
+/* CHECKBOX + RADIO */
+
+.filter-box input[type="checkbox"],
+.filter-box input[type="radio"]{
+
+    appearance:none;
+    -webkit-appearance:none;
+
+    width:22px;
+    height:22px;
+
+    border:2px solid #cbbba5;
+    background:white;
+
+    cursor:pointer;
+    position:relative;
+}
+
+.filter-box input[type="checkbox"]:checked,
+.filter-box input[type="radio"]:checked{
+    background:#b89146;
+    border-color:#b89146;
+}
+
+.filter-box input[type="checkbox"]:checked::after,
+.filter-box input[type="radio"]:checked::after{
+
+    content:"✓";
+
+    position:absolute;
+
+    top:0px;
+    left:4px;
+
+    color:white;
+    font-size:14px;
+}
+
+/* SHOW BUTTON */
+
+.show-btn{
+    width:100%;
+    padding:14px;
+
+    background:#52522d;
+    color:white;
+
+    border:none;
+    cursor:pointer;
+
+    font-family:'Montserrat', sans-serif;
+    font-size:13px;
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    transition:0.3s ease;
+}
+
+.show-btn:hover{
+    background:white;
+    color:#2f2a26;
+}
+
+
+/* ================= PRODUCTS SECTION ================= */
+
+.products-section{
+    flex:1;
+    padding:40px;
+}
+
+/* TITLE */
+
+.top-title h1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:38px;
+    font-weight:600;
+
+    color:#2f2a26;
+
+    margin-bottom:40px;
+
+    letter-spacing:2px;
+}
+
+
+/* ================= PRODUCT GRID ================= */
+
+.product-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top: 30px;
+}
+
+.no-product{
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:138px 20px;
+
+    grid-column:1 / -1;
+
+    font-family:'Montserrat', sans-serif;
+}
+
+.no-product h2{
+    font-size:32px;
+    font-weight:600;
+    color:#2b2b2b;
+
+    margin-bottom:12px;
+
+    font-family:'Cormorant Garamond', serif;
+}
+
+.no-product p{
+    font-size:15px;
+    color:#777;
+
+    font-family:'Montserrat', sans-serif;
+}
+
+/* ================= PRODUCT CARD ================= */
+
+.product-card{
+    background:#fffaf4;
+
+    border-radius:12px;
+    overflow:hidden;
+
+    transition:0.4s ease;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.product-card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,0.14);
+}
+
+
+/* IMAGE */
+
+.product-image{
+    width:100%;
+    height:250px;
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:0.4s ease;
+}
+
+.product-card:hover .product-image img{
+    transform:scale(1.05);
+}
+
+
+/* ================= PRODUCT INFO ================= */
+
+.product-info{
+    padding:24px;
+    text-align:center;
+}
+
+/* PRODUCT NAME */
+
+.product-info h3{
+    font-family:'Cormorant Garamond', serif;
+    font-size:28px;
+    font-weight:600;
+
+    color:#2f2a26;
+
+    margin-bottom:10px;
+}
+
+/* MEN / WOMEN */
+
+.gender{
+    font-family:'Montserrat', sans-serif;
+    font-size:14px;
+    font-weight:500;
+
+    letter-spacing:1px;
+
+    color:#7a7067;
+
+    margin-bottom:12px;
+}
+
+/* PRICE */
+
+.price{
+    font-family:'Montserrat', sans-serif;
+    font-size:18px;
+    font-weight:700;
+
+    color:#b89146;
+
+    margin-bottom:22px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.details-btn{
+    width:100%;
+
+    padding:14px;
+
+    background:#2f2a26;
+    color:white;
+
+    border:none;
+    cursor:pointer;
+
+    font-family:'Montserrat', sans-serif;
+    font-size:12px;
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    transition:0.3s ease;
+}
+
+.details-btn:hover{
+    background:#52522d;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+    .product-container{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:900px){
+
+    .product-page{
+        flex-direction:column;
+    }
+
+    .filter-section{
+        width:100%;
+        border-right:none;
+    }
+
+    .product-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .products-section{
+        padding:25px;
+    }
+
+    .top-title h1{
+        font-size:38px;
+    }
+
+    .product-container{
+        grid-template-columns:1fr;
+    }
+
+    .filter-header h1{
+        font-size:28px;
+    }
+}

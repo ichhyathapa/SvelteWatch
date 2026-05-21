@@ -1,0 +1,151 @@
+/* =========================
+   PAGE
+========================= */
+
+body{
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #f5f5f5;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.error-container{
+    width: 420px;
+
+    background: #ffffff;
+
+    padding: 60px 40px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+   ERROR CODE
+========================= */
+
+.error-container h1{
+    font-size: 90px;
+
+    color: #111111;
+
+    margin: 0 0 10px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.error-container h2{
+    font-size: 28px;
+
+    color: #333333;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.error-container p{
+    font-size: 15px;
+
+    color: #666666;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   ERROR DETAILS
+========================= */
+
+.error-details{
+    font-size: 13px;
+
+    color: #b00020;
+
+    background: #fff3f3;
+
+    padding: 12px;
+
+    border-radius: 6px;
+
+    margin-bottom: 20px;
+
+    word-break: break-word;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.error-container a{
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    background: #000000;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+/* hover effect */
+
+.error-container a:hover{
+    background: #444444;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 500px){
+
+    .error-container{
+        width: 90%;
+        padding: 45px 25px;
+    }
+
+    .error-container h1{
+        font-size: 70px;
+    }
+
+    .error-container h2{
+        font-size: 24px;
+    }
+
+}
